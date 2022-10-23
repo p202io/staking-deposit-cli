@@ -22,9 +22,9 @@ SEPOLIA = 'sepolia'
 # Mainnet setting
 MainnetSetting = BaseChainSetting(NETWORK_NAME=MAINNET, GENESIS_FORK_VERSION=bytes.fromhex('00000000'))
 # Project202 Mainnet setting
-P202MainnetSetting = BaseChainSetting(NETWORK_NAME=P202MAINNET, GENESIS_FORK_VERSION=bytes.fromhex('03000202')) # P202_TODO
+P202MainnetSetting = BaseChainSetting(NETWORK_NAME=P202MAINNET, GENESIS_FORK_VERSION=bytes.fromhex('00000202')) # P202_TODO
 # Project202 Testnet setting
-P202TestnetSetting = BaseChainSetting(NETWORK_NAME=P202TESTNET, GENESIS_FORK_VERSION=bytes.fromhex('03010202')) # P202_TODO
+P202TestnetSetting = BaseChainSetting(NETWORK_NAME=P202TESTNET, GENESIS_FORK_VERSION=bytes.fromhex('00010202')) # P202_TODO
 # Ropsten setting
 RopstenSetting = BaseChainSetting(NETWORK_NAME=ROPSTEN, GENESIS_FORK_VERSION=bytes.fromhex('80000069'))
 # Goerli setting
@@ -36,14 +36,14 @@ SepoliaSetting = BaseChainSetting(NETWORK_NAME=SEPOLIA, GENESIS_FORK_VERSION=byt
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
-    MAINNET: MainnetSetting,
+    #MAINNET: MainnetSetting,
     P202MAINNET: P202MainnetSetting,
     P202TESTNET: P202TestnetSetting,
-    ROPSTEN: RopstenSetting,
-    GOERLI: GoerliSetting,
-    PRATER: GoerliSetting,  # Prater is the old name of the Prater/Goerli testnet
-    KILN: KilnSetting,
-    SEPOLIA: SepoliaSetting,
+    #ROPSTEN: RopstenSetting,
+    #GOERLI: GoerliSetting,
+    #PRATER: GoerliSetting,  # Prater is the old name of the Prater/Goerli testnet
+    #KILN: KilnSetting,
+    #SEPOLIA: SepoliaSetting,
 }
 
 
