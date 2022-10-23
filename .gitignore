@@ -1,4 +1,4 @@
-validator_keys
+validator_keys*
 
 # Python testing & linting:
 build/
