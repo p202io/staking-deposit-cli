@@ -10,6 +10,8 @@ class BaseChainSetting(NamedTuple):
 
 
 MAINNET = 'mainnet'
+P202MAINNET = 'p202-mainnet'
+P202TESTNET = 'p202-testnet'
 ROPSTEN = 'ropsten'
 GOERLI = 'goerli'
 PRATER = 'prater'
@@ -19,6 +21,10 @@ SEPOLIA = 'sepolia'
 
 # Mainnet setting
 MainnetSetting = BaseChainSetting(NETWORK_NAME=MAINNET, GENESIS_FORK_VERSION=bytes.fromhex('00000000'))
+# Project202 Mainnet setting
+P202MainnetSetting = BaseChainSetting(NETWORK_NAME=P202MAINNET, GENESIS_FORK_VERSION=bytes.fromhex('00000000')) # P202_TODO
+# Project202 Testnet setting
+P202TestnetSetting = BaseChainSetting(NETWORK_NAME=P202TESTNET, GENESIS_FORK_VERSION=bytes.fromhex('00000000')) # P202_TODO
 # Ropsten setting
 RopstenSetting = BaseChainSetting(NETWORK_NAME=ROPSTEN, GENESIS_FORK_VERSION=bytes.fromhex('80000069'))
 # Goerli setting
@@ -31,6 +37,8 @@ SepoliaSetting = BaseChainSetting(NETWORK_NAME=SEPOLIA, GENESIS_FORK_VERSION=byt
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
     MAINNET: MainnetSetting,
+    P202MAINNET: P202MainnetSetting,
+    P202TESTNET: P202TestnetSetting,
     ROPSTEN: RopstenSetting,
     GOERLI: GoerliSetting,
     PRATER: GoerliSetting,  # Prater is the old name of the Prater/Goerli testnet
